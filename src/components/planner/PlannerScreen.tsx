@@ -168,6 +168,18 @@ export const PlannerScreen: React.FC<Props> = ({ plannerState, onStartClass }) =
               })()}
             </div>
 
+            {/* Músculos Principales Trabajados */}
+            <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+              <span className="text-xs font-semibold text-teal-400 block mb-1">💪 Músculos Principales:</span>
+              <div className="flex flex-wrap gap-1.5 mt-1">
+                {selectedExerciseForDetail.targetMuscles.map((muscle, idx) => (
+                  <span key={idx} className="bg-slate-700/80 text-teal-200 text-xs px-2 py-0.5 rounded-md border border-slate-600">
+                    {muscle}
+                  </span>
+                ))}
+              </div>
+            </div>
+
             {/* Claves Verbales (Cues) */}
             <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
               <span className="text-xs font-semibold text-teal-400 block mb-1">Frases de Guiado (Cues):</span>
